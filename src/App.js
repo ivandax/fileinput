@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
+import ImageInput from './components/ImageInput';
+
+import placeholder from './images/placeholder.png'
+
 function App() {
+
+  //initially, no file is set.
+  const [myFile, setFile] = useState({url: ''});
+
+  const handleSubmit = () => {
+    //here you should decide what to do with your image.
+    console.log(`Trying to submit... ${myFile ? 'File' : "No file"}`);
+  }
+
+  //this will be passed as props to retrieve file.
+  const getFile = (file) => {
+    file && setFile(file) //once successful, set the image on state.
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={myFile.url ? myFile.url : placeholder} alt="preview"/>
+      <ImageInput getFile={getFile}/>
+      <button onClick={handleSubmit}>Submit</button>  
     </div>
   );
 }

@@ -1,0 +1,24 @@
+.imageInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.imageInput label{
+    padding: 15px;
+    background-color: rgb(68, 168, 68);
+    color:white;
+    font-weight: bold;
+
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.imageInput label input{
+    display: none;
+}
+
+.message{
+    color: blue;
+}
