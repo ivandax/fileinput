@@ -1,3 +1,15 @@
+## React - Image Input - Base64
+
+Handling an image upload is a common feature in many applications and although it might be a small part of it, it's still important to handle it efficiently.
+
+This React component uses hooks to render a file input (expects an image) and transforms it to a Base64 encoded string. This is useful in the case you prefer to save the string in your database instead of storing the actual file.
+
+A few details of the component:
+
+ * The actual input tag is enclosed on the label and set to display: none. So you actually click on the label to make your upload and we get rid of the ugly html file input.
+ * Features a thumbnail for the image.
+ * The validate function on the ImageInput component can be expanded. For now it just validates that the file extension is among an array of "accepted" extensions.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
