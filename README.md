@@ -4,6 +4,8 @@ Handling an image upload is a common feature in many applications and although i
 
 This React component uses hooks to render a file input (expects an image) and transforms it to a Base64 encoded string. This is useful in the case you prefer to save the string in your database instead of storing the actual file.
 
+![alt text](http://ivandax.com/images/fileinput/fileinput.JPG)
+
 A few details of the component:
 
  * The actual input tag is enclosed on the label and set to display: none. So you actually click on the label to make your upload and we get rid of the ugly html file input.
